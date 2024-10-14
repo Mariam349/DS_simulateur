@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur de Prêt - MVC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <h1>Simulateur de Prêt</h1>
+
+    <div id="form-container">
+        <label for="montant">Montant du prêt:</label>
+        <input type="number" id="montant" value="1000" required><br>
+
+        <label for="annees">Durée en années:</label>
+        <input type="number" id="annees" value="2" required><br>
+
+        <label for="taux">Taux d'intérêt (%) :</label>
+        <input type="number" id="taux" value="2" step="0.01" required><br>
+
+        <button id="calculateButton">Calculer</button>
+    </div>
+
+    <div id="error"></div>
+
+    <h2>Résultat</h2>
+    <div id="resultat"></div>
+
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
